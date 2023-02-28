@@ -18,4 +18,4 @@ steps:
   inputs:
     targetPath: 'C:\LDRA_Workarea_C_CPP_10.1.0\simple_tbwrkfls\simple_reports\'
     artifact: 'zip'
-    publishLocation:'pipeline'
+    publishLocation: 'pipeline'
