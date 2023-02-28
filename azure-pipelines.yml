@@ -10,8 +10,8 @@ pool: Default
 
 steps:
 - script: |
-    C:\LDRA_Toolsuite_C_CPP_10.1.0\contbuildimport -build_cmd="mingw32-make simple" - startin_dir=%CD% - build -quit
-    C:\LDRA_Toolsuite_C_CPP_10.1.0\contestbed simple.btf /11234q
+    C:\LDRA_Toolsuite_C_CPP_10.1.0\contbuildimport.exe -build_cmd="mingw32-make simple" - startin_dir=%CD% - build -quit
+    C:\LDRA_Toolsuite_C_CPP_10.1.0\contestbed.exe simple.btf /11234q
   displayName: 'Run a multi-line script'
 
 - task: PublishPipelineArtifact@1
