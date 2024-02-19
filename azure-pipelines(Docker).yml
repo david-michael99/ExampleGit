@@ -15,6 +15,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '/home/ldra-runner/ldra_workarea/Cashregister_7_tbwrkfls/Cashregister_7_reports/'
+    targetPath: '/home/ldra-runner/ldra_workarea/Cashregister_6_tbwrkfls/Cashregister_6_reports/'
     artifact: 'zip'
     publishLocation: 'pipeline'
