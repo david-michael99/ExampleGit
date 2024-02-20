@@ -10,11 +10,12 @@ pool: Default
 
 steps:
 - script: |
-    /home/ldra-runner/ldra_toolsuite/contestbed /home/ldra-runner/ldra_workarea/examples/toolsuite/Cashregister_7.0/Cashregister.tcf /112a302120312panq
+    /home/ldra-runner/ldra_toolsuite/contbbuildimport -build_cmd="make simple" -startin_dir=$pwd -build -quit
+    /home/ldra-runner/ldra_toolsuite/contestbed simple.btf /112a302120312panq
   displayName: 'Run a multi-line script'
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '/home/ldra-runner/ldra_workarea/Cashregister_6_tbwrkfls/Cashregister_6_reports/'
+    targetPath: '/home/ldra-runner/ldra_workarea/simple_tbwrkfls/simple_reports/'
     artifact: 'zip'
     publishLocation: 'pipeline'
