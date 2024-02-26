@@ -10,8 +10,8 @@ pool: Default
 
 steps:
 - script: |
-    /home/ldra-runner/ldra_toolsuite/contbbuildimport -build_cmd="make simple" -startin_dir=/home/myagent/_work/1/s/ -build -quit
-    /home/ldra-runner/ldra_toolsuite/contestbed simple.btf /112a302120312panq
+    /home/ldra-runner/ldra_toolsuite/contbbuildimport -build_cmd="make simple" -build -quit
+    /home/ldra-runner/ldra_toolsuite/contestbed simple.btf 112a302120312panq
   displayName: 'Run a multi-line script'
 
 - task: PublishPipelineArtifact@1
