@@ -12,10 +12,11 @@ steps:
 - script: |
     /home/ldra-runner/ldra_toolsuite/contbbuildimport -build_cmd="make simple" -startin_dir=/azp/_work/1/s/ -build -quit
     /home/ldra-runner/ldra_toolsuite/contestbed simple.btf 112a302120312panq
+    /home/ldra-runner/ldra_workarea/toolsuite/Cashregister_7.0/Run_LowLevelTests.sh
   displayName: 'Run a multi-line script'
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '/home/ldra-runner/ldra_workarea/simple_tbwrkfls/simple_reports/'
+    targetPath: '/home/ldra-runner/ldra_workarea/Cashregister_tbwrkfls/Cashregister_reports/'
     artifact: 'zip'
     publishLocation: 'pipeline'
