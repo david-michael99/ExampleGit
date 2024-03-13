@@ -3,17 +3,12 @@
 # Add steps that publish test results, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/c-cpp/gcc
 
-trigger:
-- main
-
 pool: Default
 
 steps:
 - script: |
-    /home/ldra-runner/ldra_toolsuite/contbbuildimport -build_cmd="make simple" -startin_dir=/azp/_work/1/s/ -build -quit
-    /home/ldra-runner/ldra_toolsuite/contestbed simple.btf 112a302120312panq
     /home/ldra-runner/ldra_workarea/examples/toolsuite/Cashregister_7.0/Run_LowLevelTests.sh
-  displayName: 'Run a multi-line script'
+  displayName: 'Run Unit test script'
 
 - task: PublishPipelineArtifact@1
   inputs:
